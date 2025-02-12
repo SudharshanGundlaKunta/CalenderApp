@@ -23,7 +23,6 @@ struct CalendarView2: View {
                         viewModel.decreseMonth()
                     }
                 Spacer()
-                
                 Text("\(viewModel.teluguMonths[viewModel.month - 1]) - \(viewModel.year.description)")
                     .font(.title2.bold())
                     .padding(.bottom)
