@@ -1,0 +1,535 @@
+
+{
+  "year": 2024,
+  "month": "జనవరి",
+  "englishMonth": "January",
+  "days": [
+    {
+      "date": "2024-01-01",
+      "teluguDate": "పుష్య మాసం 17",
+      "day": "సోమవారం",
+      "festival": "నూతన సంవత్సర దినోత్సవం",
+      "details": {
+        "tithi": "శుక్ల ప్రతిపదం",
+        "nakshatra": "అశ్విని",
+        "yoga": "యోగా 1",
+        "karana": "బవ",
+        "sunrise": "06:30 AM",
+        "sunset": "06:45 PM",
+        "moonrise": "08:00 AM",
+        "moonset": "07:30 PM",
+        "rahuKalam": "07:30-09:00"
+      }
+    },
+    {
+      "date": "2024-01-02",
+      "teluguDate": "పుష్య మాసం 18",
+      "day": "మంగళవారం",
+      "festival": "",
+      "details": {
+        "tithi": "శుక్ల ద్వితీయం",
+        "nakshatra": "భరణి",
+        "yoga": "యోగా 2",
+        "karana": "బాలవ",
+        "sunrise": "06:30 AM",
+        "sunset": "06:45 PM",
+        "moonrise": "08:05 AM",
+        "moonset": "07:25 PM",
+        "rahuKalam": "12:00-01:30"
+      }
+    },
+    {
+      "date": "2024-01-03",
+      "teluguDate": "పుష్య మాసం 19",
+      "day": "బుధవారం",
+      "festival": "",
+      "details": {
+        "tithi": "శుక్ల తృతీయం",
+        "nakshatra": "కృత్తిక",
+        "yoga": "యోగా 3",
+        "karana": "కౌలవ",
+        "sunrise": "06:31 AM",
+        "sunset": "06:44 PM",
+        "moonrise": "08:10 AM",
+        "moonset": "07:20 PM",
+        "rahuKalam": "10:30-12:00"
+      }
+    },
+    {
+      "date": "2024-01-04",
+      "teluguDate": "పుష్య మాసం 20",
+      "day": "గురువారం",
+      "festival": "సంకటహర చతుర్థి",
+      "details": {
+        "tithi": "శుక్ల చతుర్థం",
+        "nakshatra": "రోహిణి",
+        "yoga": "యోగా 4",
+        "karana": "తైతిల",
+        "sunrise": "06:31 AM",
+        "sunset": "06:44 PM",
+        "moonrise": "08:15 AM",
+        "moonset": "07:15 PM",
+        "rahuKalam": "09:00-10:30"
+      }
+    },
+    {
+      "date": "2024-01-05",
+      "teluguDate": "పుష్య మాసం 21",
+      "day": "శుక్రవారం",
+      "festival": "",
+      "details": {
+        "tithi": "శుక్ల పంచమం",
+        "nakshatra": "మృగశిర",
+        "yoga": "యోగా 5",
+        "karana": "గరజ",
+        "sunrise": "06:32 AM",
+        "sunset": "06:44 PM",
+        "moonrise": "08:20 AM",
+        "moonset": "07:10 PM",
+        "rahuKalam": "07:30-09:00"
+      }
+    },
+    {
+      "date": "2024-01-06",
+      "teluguDate": "పుష్య మాసం 22",
+      "day": "శనివారం",
+      "festival": "",
+      "details": {
+        "tithi": "శుక్ల షష్ఠం",
+        "nakshatra": "ఆరుద్ర",
+        "yoga": "యోగా 6",
+        "karana": "వనిజ",
+        "sunrise": "06:32 AM",
+        "sunset": "06:44 PM",
+        "moonrise": "08:25 AM",
+        "moonset": "07:05 PM",
+        "rahuKalam": "12:00-01:30"
+      }
+    },
+    {
+      "date": "2024-01-07",
+      "teluguDate": "పుష్య మాసం 23",
+      "day": "ఆదివారం",
+      "festival": "భోగి పండుగ (ఆగమి)",
+      "details": {
+        "tithi": "శుక్ల సప్తమం",
+        "nakshatra": "పునర్వసు",
+        "yoga": "యోగా 7",
+        "karana": "విష్టి",
+        "sunrise": "06:33 AM",
+        "sunset": "06:43 PM",
+        "moonrise": "08:30 AM",
+        "moonset": "07:00 PM",
+        "rahuKalam": "10:30-12:00"
+      }
+    },
+    {
+      "date": "2024-01-08",
+      "teluguDate": "పుష్య మాసం 24",
+      "day": "సోమవారం",
+      "festival": "",
+      "details": {
+        "tithi": "శుక్ల అష్టమం",
+        "nakshatra": "పుష్య",
+        "yoga": "యోగా 8",
+        "karana": "శకుని",
+        "sunrise": "06:33 AM",
+        "sunset": "06:43 PM",
+        "moonrise": "08:35 AM",
+        "moonset": "06:55 PM",
+        "rahuKalam": "07:30-09:00"
+      }
+    },
+    {
+      "date": "2024-01-09",
+      "teluguDate": "పుష్య మాసం 25",
+      "day": "మంగళవారం",
+      "festival": "",
+      "details": {
+        "tithi": "శుక్ల నవమం",
+        "nakshatra": "అశ్లేష",
+        "yoga": "యోగా 9",
+        "karana": "చతుష్పాద",
+        "sunrise": "06:34 AM",
+        "sunset": "06:43 PM",
+        "moonrise": "08:40 AM",
+        "moonset": "06:50 PM",
+        "rahuKalam": "12:00-01:30"
+      }
+    },
+    {
+      "date": "2024-01-10",
+      "teluguDate": "పుష్య మాసం 26",
+      "day": "బుధవారం",
+      "festival": "",
+      "details": {
+        "tithi": "శుక్ల దశమం",
+        "nakshatra": "మేఘమ",
+        "yoga": "యోగా 1",
+        "karana": "నాగ",
+        "sunrise": "06:34 AM",
+        "sunset": "06:43 PM",
+        "moonrise": "08:45 AM",
+        "moonset": "06:45 PM",
+        "rahuKalam": "10:30-12:00"
+      }
+    },
+    {
+      "date": "2024-01-11",
+      "teluguDate": "పుష్య మాసం 27",
+      "day": "గురువారం",
+      "festival": "అమావాస్య",
+      "details": {
+        "tithi": "శుక్ల ఏకాదశం",
+        "nakshatra": "పూర్వాఫాలగుణి",
+        "yoga": "యోగా 2",
+        "karana": "కింస్థుగ్న",
+        "sunrise": "06:35 AM",
+        "sunset": "06:42 PM",
+        "moonrise": "08:50 AM",
+        "moonset": "06:40 PM",
+        "rahuKalam": "09:00-10:30"
+      }
+    },
+    {
+      "date": "2024-01-12",
+      "teluguDate": "పుష్య మాసం 28",
+      "day": "శుక్రవారం",
+      "festival": "మాస శివరాత్రి",
+      "details": {
+        "tithi": "శుక్ల ద్వాదశం",
+        "nakshatra": "ఉత్తరాఫాలగుణి",
+        "yoga": "యోగా 3",
+        "karana": "బవ",
+        "sunrise": "06:35 AM",
+        "sunset": "06:42 PM",
+        "moonrise": "08:55 AM",
+        "moonset": "06:35 PM",
+        "rahuKalam": "07:30-09:00"
+      }
+    },
+    {
+      "date": "2024-01-13",
+      "teluguDate": "పుష్య మాసం 29",
+      "day": "శనివారం",
+      "festival": "భోగి",
+      "details": {
+        "tithi": "శుక్ల త్రయోదశం",
+        "nakshatra": "హస్త",
+        "yoga": "యోగా 4",
+        "karana": "బాలవ",
+        "sunrise": "06:36 AM",
+        "sunset": "06:42 PM",
+        "moonrise": "09:00 AM",
+        "moonset": "06:30 PM",
+        "rahuKalam": "12:00-01:30"
+      }
+    },
+    {
+      "date": "2024-01-14",
+      "teluguDate": "పుష్య మాసం 30",
+      "day": "ఆదివారం",
+      "festival": "సంక్రాంతి ఈవ్",
+      "details": {
+        "tithi": "శుక్ల చతుర్దశం",
+        "nakshatra": "చిత్ర",
+        "yoga": "యోగా 5",
+        "karana": "కౌలవ",
+        "sunrise": "06:36 AM",
+        "sunset": "06:42 PM",
+        "moonrise": "09:05 AM",
+        "moonset": "06:25 PM",
+        "rahuKalam": "10:30-12:00"
+      }
+    },
+    {
+      "date": "2024-01-15",
+      "teluguDate": "పుష్య మాసం 31",
+      "day": "సోమవారం",
+      "festival": "మకర సంక్రాంతి",
+      "details": {
+        "tithi": "శుక్ల పూర్ణిమా",
+        "nakshatra": "శ్రావణ",
+        "yoga": "యోగా 6",
+        "karana": "తైతిల",
+        "sunrise": "06:37 AM",
+        "sunset": "06:41 PM",
+        "moonrise": "09:10 AM",
+        "moonset": "06:20 PM",
+        "rahuKalam": "07:30-09:00"
+      }
+    },
+    {
+      "date": "2024-01-16",
+      "teluguDate": "మాఘ మాసం 1",
+      "day": "మంగళవారం",
+      "festival": "కనుమ",
+      "details": {
+        "tithi": "కృష్ణ ప్రతిపదం",
+        "nakshatra": "ధనిష్ట",
+        "yoga": "యోగా 7",
+        "karana": "గరజ",
+        "sunrise": "06:37 AM",
+        "sunset": "06:41 PM",
+        "moonrise": "09:15 AM",
+        "moonset": "06:15 PM",
+        "rahuKalam": "12:00-01:30"
+      }
+    },
+    {
+      "date": "2024-01-17",
+      "teluguDate": "మాఘ మాసం 2",
+      "day": "బుధవారం",
+      "festival": "",
+      "details": {
+        "tithi": "కృష్ణ ద్వితీయం",
+        "nakshatra": "శతభిష",
+        "yoga": "యోగా 8",
+        "karana": "వనిజ",
+        "sunrise": "06:38 AM",
+        "sunset": "06:41 PM",
+        "moonrise": "09:20 AM",
+        "moonset": "06:10 PM",
+        "rahuKalam": "10:30-12:00"
+      }
+    },
+    {
+      "date": "2024-01-18",
+      "teluguDate": "మాఘ మాసం 3",
+      "day": "గురువారం",
+      "festival": "",
+      "details": {
+        "tithi": "కృష్ణ తృతీయం",
+        "nakshatra": "పూర్వభాద్రపాద",
+        "yoga": "యోగా 9",
+        "karana": "విష్టి",
+        "sunrise": "06:38 AM",
+        "sunset": "06:41 PM",
+        "moonrise": "09:25 AM",
+        "moonset": "06:05 PM",
+        "rahuKalam": "09:00-10:30"
+      }
+    },
+    {
+      "date": "2024-01-19",
+      "teluguDate": "మాఘ మాసం 4",
+      "day": "శుక్రవారం",
+      "festival": "",
+      "details": {
+        "tithi": "కృష్ణ చతుర్థం",
+        "nakshatra": "ఉత్తరభాద్రపాద",
+        "yoga": "యోగా 1",
+        "karana": "శకుని",
+        "sunrise": "06:39 AM",
+        "sunset": "06:40 PM",
+        "moonrise": "09:30 AM",
+        "moonset": "06:00 PM",
+        "rahuKalam": "07:30-09:00"
+      }
+    },
+    {
+      "date": "2024-01-20",
+      "teluguDate": "మాఘ మాసం 5",
+      "day": "శనివారం",
+      "festival": "",
+      "details": {
+        "tithi": "కృష్ణ పంచమం",
+        "nakshatra": "రేవతి",
+        "yoga": "యోగా 2",
+        "karana": "చతుష్పాద",
+        "sunrise": "06:39 AM",
+        "sunset": "06:40 PM",
+        "moonrise": "09:35 AM",
+        "moonset": "05:55 PM",
+        "rahuKalam": "12:00-01:30"
+      }
+    },
+    {
+      "date": "2024-01-21",
+      "teluguDate": "మాఘ మాసం 6",
+      "day": "ఆదివారం",
+      "festival": "వసంత పంచమి",
+      "details": {
+        "tithi": "కృష్ణ షష్ఠం",
+        "nakshatra": "అశ్విని",
+        "yoga": "యోగా 3",
+        "karana": "నాగ",
+        "sunrise": "06:40 AM",
+        "sunset": "06:40 PM",
+        "moonrise": "09:40 AM",
+        "moonset": "05:50 PM",
+        "rahuKalam": "10:30-12:00"
+      }
+    },
+    {
+      "date": "2024-01-22",
+      "teluguDate": "మాఘ మాసం 7",
+      "day": "సోమవారం",
+      "festival": "",
+      "details": {
+        "tithi": "కృష్ణ సప్తమం",
+        "nakshatra": "భరణి",
+        "yoga": "యోగా 4",
+        "karana": "కింస్థుగ్న",
+        "sunrise": "06:40 AM",
+        "sunset": "06:40 PM",
+        "moonrise": "09:45 AM",
+        "moonset": "05:45 PM",
+        "rahuKalam": "07:30-09:00"
+      }
+    },
+    {
+      "date": "2024-01-23",
+      "teluguDate": "మాఘ మాసం 8",
+      "day": "మంగళవారం",
+      "festival": "",
+      "details": {
+        "tithi": "కృష్ణ అష్టమం",
+        "nakshatra": "కృత్తిక",
+        "yoga": "యోగా 5",
+        "karana": "బవ",
+        "sunrise": "06:41 AM",
+        "sunset": "06:39 PM",
+        "moonrise": "09:50 AM",
+        "moonset": "05:40 PM",
+        "rahuKalam": "12:00-01:30"
+      }
+    },
+    {
+      "date": "2024-01-24",
+      "teluguDate": "మాఘ మాసం 9",
+      "day": "బుధవారం",
+      "festival": "",
+      "details": {
+        "tithi": "కృష్ణ నవమం",
+        "nakshatra": "రోహిణి",
+        "yoga": "యోగా 6",
+        "karana": "బాలవ",
+        "sunrise": "06:41 AM",
+        "sunset": "06:39 PM",
+        "moonrise": "09:55 AM",
+        "moonset": "05:35 PM",
+        "rahuKalam": "10:30-12:00"
+      }
+    },
+    {
+      "date": "2024-01-25",
+      "teluguDate": "మాఘ మాసం 10",
+      "day": "గురువారం",
+      "festival": "",
+      "details": {
+        "tithi": "కృష్ణ దశమం",
+        "nakshatra": "మృగశిర",
+        "yoga": "యోగా 7",
+        "karana": "కౌలవ",
+        "sunrise": "06:42 AM",
+        "sunset": "06:39 PM",
+        "moonrise": "10:00 AM",
+        "moonset": "05:30 PM",
+        "rahuKalam": "09:00-10:30"
+      }
+    },
+    {
+      "date": "2024-01-26",
+      "teluguDate": "మాఘ మాసం 11",
+      "day": "శుక్రవారం",
+      "festival": "గణతంత్ర దినోత్సవం",
+      "details": {
+        "tithi": "కృష్ణ ఏకాదశం",
+        "nakshatra": "ఆరుద్ర",
+        "yoga": "యోగా 8",
+        "karana": "తైతిల",
+        "sunrise": "06:42 AM",
+        "sunset": "06:39 PM",
+        "moonrise": "10:05 AM",
+        "moonset": "05:25 PM",
+        "rahuKalam": "07:30-09:00"
+      }
+    },
+    {
+      "date": "2024-01-27",
+      "teluguDate": "మాఘ మాసం 12",
+      "day": "శనివారం",
+      "festival": "",
+      "details": {
+        "tithi": "కృష్ణ ద్వాదశం",
+        "nakshatra": "పునర్వసు",
+        "yoga": "యోగా 9",
+        "karana": "విష్టి",
+        "sunrise": "06:43 AM",
+        "sunset": "06:38 PM",
+        "moonrise": "10:10 AM",
+        "moonset": "05:20 PM",
+        "rahuKalam": "12:00-01:30"
+      }
+    },
+    {
+      "date": "2024-01-28",
+      "teluguDate": "మాఘ మాసం 13",
+      "day": "ఆదివారం",
+      "festival": "",
+      "details": {
+        "tithi": "కృష్ణ త్రయోదశం",
+        "nakshatra": "పుష్య",
+        "yoga": "యోగా 1",
+        "karana": "నాగ",
+        "sunrise": "06:43 AM",
+        "sunset": "06:38 PM",
+        "moonrise": "10:15 AM",
+        "moonset": "05:15 PM",
+        "rahuKalam": "10:30-12:00"
+      }
+    },
+    {
+      "date": "2024-01-29",
+      "teluguDate": "మాఘ మాసం 14",
+      "day": "సోమవారం",
+      "festival": "",
+      "details": {
+        "tithi": "కృష్ణ చతుర్దశం",
+        "nakshatra": "అశ్లేష",
+        "yoga": "యోగా 2",
+        "karana": "బవ",
+        "sunrise": "06:44 AM",
+        "sunset": "06:38 PM",
+        "moonrise": "10:20 AM",
+        "moonset": "05:10 PM",
+        "rahuKalam": "07:30-09:00"
+      }
+    },
+    {
+      "date": "2024-01-30",
+      "teluguDate": "మాఘ మాసం 15",
+      "day": "మంగళవారం",
+      "festival": "",
+      "details": {
+        "tithi": "కృష్ణ అమావాస్య",
+        "nakshatra": "మేఘమ",
+        "yoga": "యోగా 3",
+        "karana": "కౌలవ",
+        "sunrise": "06:44 AM",
+        "sunset": "06:38 PM",
+        "moonrise": "10:25 AM",
+        "moonset": "05:05 PM",
+        "rahuKalam": "12:00-01:30"
+      }
+    },
+    {
+      "date": "2024-01-31",
+      "teluguDate": "మాఘ మాసం 16",
+      "day": "బుధవారం",
+      "festival": "",
+      "details": {
+        "tithi": "కృష్ణ అమావాస్య",
+        "nakshatra": "పూర్వాఫాలగుణి",
+        "yoga": "యోగా 4",
+        "karana": "చతుష్పాద",
+        "sunrise": "06:45 AM",
+        "sunset": "06:37 PM",
+        "moonrise": "10:30 AM",
+        "moonset": "05:00 PM",
+        "rahuKalam": "10:30-12:00"
+      }
+    }
+  ]
+}
