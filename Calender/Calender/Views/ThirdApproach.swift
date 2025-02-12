@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CalendarView2: View {
     
-    
     @StateObject var viewModel = CalenderViewModel()
     @State var openDetailBottomSheet = false
     
