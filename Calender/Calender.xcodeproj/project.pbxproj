@@ -8,24 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		185062952D5A54BE005D34FD /* CalenderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185062942D5A54BE005D34FD /* CalenderApp.swift */; };
-		185062972D5A54BE005D34FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185062962D5A54BE005D34FD /* ContentView.swift */; };
+		185062972D5A54BE005D34FD /* CalenderFirstApproach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185062962D5A54BE005D34FD /* CalenderFirstApproach.swift */; };
 		185062992D5A54C1005D34FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185062982D5A54C1005D34FD /* Assets.xcassets */; };
 		1850629C2D5A54C1005D34FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1850629B2D5A54C1005D34FD /* Preview Assets.xcassets */; };
 		185062A52D5A5D34005D34FD /* calenderJson.json in Sources */ = {isa = PBXBuildFile; fileRef = 185062A42D5A5D34005D34FD /* calenderJson.json */; };
 		185062A62D5A619D005D34FD /* calenderJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 185062A42D5A5D34005D34FD /* calenderJson.json */; };
-		187388E72D5B975300A309D7 /* SecondApproch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187388E62D5B975300A309D7 /* SecondApproch.swift */; };
-		187388E92D5BA9F100A309D7 /* ThirdApproach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187388E82D5BA9F100A309D7 /* ThirdApproach.swift */; };
+		187388E72D5B975300A309D7 /* MonthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187388E62D5B975300A309D7 /* MonthModel.swift */; };
+		187388E92D5BA9F100A309D7 /* CalenderDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187388E82D5BA9F100A309D7 /* CalenderDashboard.swift */; };
+		18F73EB52D5D1F5F00718E7D /* LocalJsonDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F73EB42D5D1F5F00718E7D /* LocalJsonDataManager.swift */; };
+		18F73EB82D5D20AA00718E7D /* CalenderDashboardVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F73EB72D5D20AA00718E7D /* CalenderDashboardVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		185062912D5A54BE005D34FD /* Calender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185062942D5A54BE005D34FD /* CalenderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderApp.swift; sourceTree = "<group>"; };
-		185062962D5A54BE005D34FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		185062962D5A54BE005D34FD /* CalenderFirstApproach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderFirstApproach.swift; sourceTree = "<group>"; };
 		185062982D5A54C1005D34FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1850629B2D5A54C1005D34FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		185062A42D5A5D34005D34FD /* calenderJson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = calenderJson.json; sourceTree = "<group>"; };
-		187388E62D5B975300A309D7 /* SecondApproch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondApproch.swift; sourceTree = "<group>"; };
-		187388E82D5BA9F100A309D7 /* ThirdApproach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdApproach.swift; sourceTree = "<group>"; };
+		187388E62D5B975300A309D7 /* MonthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthModel.swift; sourceTree = "<group>"; };
+		187388E82D5BA9F100A309D7 /* CalenderDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderDashboard.swift; sourceTree = "<group>"; };
+		18F73EB42D5D1F5F00718E7D /* LocalJsonDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalJsonDataManager.swift; sourceTree = "<group>"; };
+		18F73EB72D5D20AA00718E7D /* CalenderDashboardVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderDashboardVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +64,12 @@
 			children = (
 				185062942D5A54BE005D34FD /* CalenderApp.swift */,
 				185062982D5A54C1005D34FD /* Assets.xcassets */,
-				185062A32D5A5D11005D34FD /* LocalJsons */,
+				18F73EB22D5D1F2700718E7D /* Resources */,
+				18F73EB32D5D1F3500718E7D /* NetworkManagers */,
+				18F73EB12D5D1EFB00718E7D /* Models */,
 				185062A22D5A54D4005D34FD /* Views */,
+				18F73EB62D5D207F00718E7D /* ViewModels */,
+				185062A32D5A5D11005D34FD /* LocalJsons */,
 				1850629A2D5A54C1005D34FD /* Preview Content */,
 			);
 			path = Calender;
@@ -78,9 +86,8 @@
 		185062A22D5A54D4005D34FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				185062962D5A54BE005D34FD /* ContentView.swift */,
-				187388E62D5B975300A309D7 /* SecondApproch.swift */,
-				187388E82D5BA9F100A309D7 /* ThirdApproach.swift */,
+				187388E82D5BA9F100A309D7 /* CalenderDashboard.swift */,
+				185062962D5A54BE005D34FD /* CalenderFirstApproach.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -91,6 +98,37 @@
 				185062A42D5A5D34005D34FD /* calenderJson.json */,
 			);
 			path = LocalJsons;
+			sourceTree = "<group>";
+		};
+		18F73EB12D5D1EFB00718E7D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				187388E62D5B975300A309D7 /* MonthModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		18F73EB22D5D1F2700718E7D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		18F73EB32D5D1F3500718E7D /* NetworkManagers */ = {
+			isa = PBXGroup;
+			children = (
+				18F73EB42D5D1F5F00718E7D /* LocalJsonDataManager.swift */,
+			);
+			path = NetworkManagers;
+			sourceTree = "<group>";
+		};
+		18F73EB62D5D207F00718E7D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				18F73EB72D5D20AA00718E7D /* CalenderDashboardVM.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,11 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185062972D5A54BE005D34FD /* ContentView.swift in Sources */,
+				185062972D5A54BE005D34FD /* CalenderFirstApproach.swift in Sources */,
+				18F73EB52D5D1F5F00718E7D /* LocalJsonDataManager.swift in Sources */,
 				185062A52D5A5D34005D34FD /* calenderJson.json in Sources */,
 				185062952D5A54BE005D34FD /* CalenderApp.swift in Sources */,
-				187388E72D5B975300A309D7 /* SecondApproch.swift in Sources */,
-				187388E92D5BA9F100A309D7 /* ThirdApproach.swift in Sources */,
+				18F73EB82D5D20AA00718E7D /* CalenderDashboardVM.swift in Sources */,
+				187388E72D5B975300A309D7 /* MonthModel.swift in Sources */,
+				187388E92D5BA9F100A309D7 /* CalenderDashboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CalenderFirstApproach: View {
     
     @State var openDetailsBottomSheet = false
-    @State var mothDetails: MonthDetails? = NetworkManager.shared.getData()
+    @State var mothDetails: MonthDetails? = LocalJsonDataManager.shared.getData()
     @State var curretIndex = 0
     
     var body: some View {
@@ -64,44 +64,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    CalenderFirstApproach()
 }
 
-struct MonthDetails: Codable {
-    var year: Int
-    var month, englishMonth: String
-    var days: [DayDetails]
-}
-
-struct DayDetails: Codable {
-    var date, teluguDate, day, festival: String
-    var details: MoreDetails
-}
-
-struct MoreDetails: Codable {
-    var tithi, nakshatra, yoga, karana, sunrise, sunset, moonrise, moonset, rahuKalam: String
-}
-
-class NetworkManager {
-    static let shared = NetworkManager()
-    
-    private init() {}
-    
-    func getData() ->  MonthDetails?{
-        guard let url = Bundle.main.url(forResource: "calenderJson", withExtension: "json") else {
-            print("JSON file not found")
-            return nil
-        }
-        
-        do {
-            let data = try Data(contentsOf: url)
-            let calenderDate = try JSONDecoder().decode(MonthDetails.self, from: data)
-            //print(calenderDate)
-            return calenderDate
-        }catch {
-            print("Catch")
-        }
-        return nil
-    }
-}
 
