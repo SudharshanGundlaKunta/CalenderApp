@@ -8,7 +8,7 @@
 import Foundation
 
 class CalenderDashboardViewModel: ObservableObject {
-    private let calendar: Calendar = {
+    let calendar: Calendar = {
         var cal = Calendar(identifier: .gregorian)
         cal.timeZone = TimeZone.current
         cal.firstWeekday = 1 // Sunday
@@ -46,8 +46,9 @@ class CalenderDashboardViewModel: ObservableObject {
             let extraCount = daysArray.count - 35
             let extraDays = daysArray.suffix(extraCount)
             daysArray.removeLast(extraCount)
-            let arrayOfExtraDays = Array(extraDays)
+            
             //MARK: Converting Array Slicing to array
+            //let arrayOfExtraDays = Array(extraDays)
             //for i in 0..<arrayOfExtraDays.count {
              //   daysArray[i] = arrayOfExtraDays[i]
             //}

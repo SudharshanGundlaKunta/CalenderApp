@@ -20,7 +20,9 @@ struct CalenderDashboard: View {
                     .font(.title2.bold())
                     .padding(.bottom)
                     .onTapGesture {
-                        viewModel.decreseMonth()
+                        withAnimation {
+                            viewModel.decreseMonth()
+                        }
                     }
                 Spacer()
                 Text("\(viewModel.teluguMonths[viewModel.month - 1]) - \(viewModel.year.description)")
@@ -33,7 +35,9 @@ struct CalenderDashboard: View {
                     .font(.title2.bold())
                     .padding(.bottom)
                     .onTapGesture {
-                        viewModel.increaseMonth()
+                        withAnimation {
+                            viewModel.increaseMonth()
+                        }
                     }
             }
             HStack{
@@ -53,9 +57,12 @@ struct CalenderDashboard: View {
                     VStack(spacing: 8) {
                         ForEach(viewModel.days[rowIndex].indices, id: \.self) { colIndex in
                             if viewModel.days[rowIndex][colIndex] == "" {
-                                Image(systemName: "snowflake")
-                                    .foregroundColor(.red)
+                                let randomNum = Int.random(in: 1...3)
+                                Image("")
+                                    .resizable()
                                     .frame(width: 50, height: 50)
+                                    .cornerRadius(4)
+                                    .scaledToFit()
                                     .background(
                                         RoundedRectangle(cornerRadius: 4)
                                             .fill(viewModel.days[rowIndex][colIndex].isEmpty ? Color.clear : Color.blue.opacity(0.1)
@@ -70,7 +77,8 @@ struct CalenderDashboard: View {
                                     .frame(width: 50, height: 50)
                                     .background(
                                         RoundedRectangle(cornerRadius: 4)
-                                            .fill(viewModel.days[rowIndex][colIndex].isEmpty ? Color.clear : Color.blue.opacity(0.1)
+                                            .fill(
+                                                viewModel.days[rowIndex][colIndex].isEmpty ? Color.clear : (colIndex == 0 ? Color.red.opacity(0.4) : Color.blue.opacity(0.1))
                                                  )
                                     )
                                     .overlay(
