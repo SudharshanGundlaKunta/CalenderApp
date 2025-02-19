@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct AlarmClockView: View {
-    // Total minutes since 12:00 (in a 12-hour cycle).
-    // For example, 90 represents 1:30.
-    @State private var totalMinutes: Double = 0
-    @State private var hourHandOffset: Double? = nil
-    @State private var minuteHandOffset: Double? = nil
+    
+    @StateObject var clockVM: AlarmClockVM = AlarmClockVM()
+    @Environment(\.presentationMode) var dismiss
+    var save: () -> ()
 
     var body: some View {
         VStack {
@@ -40,62 +39,29 @@ struct AlarmClockView: View {
                     
                     // Hour hand (blue) with arrow shape.
                     ArrowHand(handLength: size / 3, handWidth: 8)
-                        .fill(Color.blue)
-                        .rotationEffect(Angle.degrees((totalMinutes / 60) * 30))
+                        .fill(Color.black)
+                        .rotationEffect(clockVM.hourArrowAngle)
                         .gesture(
                             DragGesture()
                                 .onChanged { value in
-                                    let vector = CGVector(dx: value.location.x - center.x,
-                                                            dy: value.location.y - center.y)
-                                    var angleInDegrees = atan2(vector.dy, vector.dx) * 180 / .pi
-                                    if angleInDegrees < 0 { angleInDegrees += 360 }
-                                    
-                                    // On first update, capture the offset.
-                                    if hourHandOffset == nil {
-                                        let currentAngle = (totalMinutes / 60) * 30
-                                        hourHandOffset = angleInDegrees - currentAngle
-                                    }
-                                    // Use the offset to update the hand angle smoothly.
-                                    let newAngle = angleInDegrees - (hourHandOffset ?? 0)
-                                    totalMinutes = (newAngle / 30) * 60
+                                    clockVM.onHoursDrag(value: value, center: center)
                                 }
                                 .onEnded { _ in
-                                    hourHandOffset = nil
+                                    clockVM.hourHandOffset = nil
                                 }
                         )
                     
                     // Minute hand (red) with arrow shape.
                     ArrowHand(handLength: size / 2.5, handWidth: 4)
-                        .fill(Color.red)
-                        .rotationEffect(Angle.degrees((totalMinutes.truncatingRemainder(dividingBy: 60)) * 6))
+                        .fill(Color.accentColor)
+                        .rotationEffect(clockVM.minuteArrowAngle)
                         .gesture(
                             DragGesture()
                                 .onChanged { value in
-                                    let vector = CGVector(dx: value.location.x - center.x,
-                                                            dy: value.location.y - center.y)
-                                    var angleInDegrees = atan2(vector.dy, vector.dx) * 180 / .pi
-                                    if angleInDegrees < 0 { angleInDegrees += 360 }
-                                    
-                                    // Capture initial offset for the minute hand.
-                                    if minuteHandOffset == nil {
-                                        let currentMinute = totalMinutes.truncatingRemainder(dividingBy: 60)
-                                        let currentAngle = currentMinute * 6
-                                        minuteHandOffset = angleInDegrees - currentAngle
-                                    }
-                                    
-                                    let newAngle = angleInDegrees - (minuteHandOffset ?? 0)
-                                    let newMinute = newAngle / 6
-                                    
-                                    let currentMinute = totalMinutes.truncatingRemainder(dividingBy: 60)
-                                    var delta = newMinute - currentMinute
-                                    // Handle wrap-around.
-                                    if delta > 30 { delta -= 60 }
-                                    else if delta < -30 { delta += 60 }
-                                    
-                                    totalMinutes += delta
+                                    clockVM.onMinutesDrag(value: value, center: center)
                                 }
                                 .onEnded { _ in
-                                    minuteHandOffset = nil
+                                    clockVM.minuteHandOffset = nil
                                 }
                         )
                     
@@ -110,26 +76,152 @@ struct AlarmClockView: View {
                 .frame(width: size, height: size)
             }
             .aspectRatio(1, contentMode: .fit)
-            .padding(.all, 64)
+            .padding(.all, 24)
             
-            // Display the alarm time in HH:MM format.
-            let hours = Int(totalMinutes / 60) % 12
-            let minutes = Int(totalMinutes.truncatingRemainder(dividingBy: 60))
-            Text(String(format: "Alarm Time: %02d:%02d", hours, minutes))
-                .font(.headline)
-                .padding()
+            HStack(spacing: 8) {
+                Text(String(format: "%02d : %02d", clockVM.hours, clockVM.minutes))
+                    .font(.largeTitle)
+                    .fontWeight(.black)
+                    .padding(.leading, 16)
+                    .onTapGesture {
+                        
+                    }
+                
+                Menu {
+                    Button("AM", action: {})
+                    Button("PM", action: {})
+                } label: {
+                    Text(("AM"))
+                        .underline()
+                }
+                .font(.system(size: 20, weight: .semibold))
+                .foregroundColor(.red)
+                
+                
+                
+            }
             
             Spacer()
             
-            
+            ScrollView {
+                VStack(spacing: 16){
+                    
+                    Divider()
+                    HStack {
+                        Text("Label")
+                        Spacer()
+                        Menu{
+                            Button("Work", action: {})
+                            Button("Personal", action: {})
+                            
+                        } label: {
+                            Text("Label")
+                                .underline()
+                        }
+                        .foregroundColor(.blue)
+                    }
+                    
+                    Divider()
+                    HStack {
+                        Text("Frequency")
+                        Spacer()
+                        Menu{
+                            Button("Daily", action: {})
+                            Button("Custom", action: {})
+                            Button("Weekdays", action: {})
+                        } label: {
+                            Text("Daily")
+                                .underline()
+                        }
+                        .foregroundColor(.blue)
+                    }
+                    Divider()
+                    HStack {
+                        Text("Type")
+                        Spacer()
+                        Menu{
+                            Button("Click annd stop", action: {})
+                            Button("Image Recognisation", action: {})
+                            Button("Puzzle Solver", action: {})
+                            
+                        } label: {
+                            Text("Normal")
+                                .underline()
+                        }
+                        .foregroundColor(.blue)
+                    }
+                    
+                    Divider()
+                    HStack {
+                        Text("Alarm Sound")
+                        Spacer()
+                        Menu{
+                            Button("Rains", action: {})
+                            Button("Imagine dragons", action: {})
+                            Button("Dont mess", action: {})
+                            
+                        } label: {
+                            Text("default")
+                                .underline()
+                        }
+                        .foregroundColor(.blue)
+                    }
+                    
+                    Divider()
+                    HStack {
+                        Text("Snooze")
+                        Spacer()
+                        Menu{
+                            Button("10 min", action: {})
+                            Button("15 min", action: {})
+                            Button("20 min", action: {})
+                            
+                        } label: {
+                            Text("5min")
+                                .underline()
+                        }
+                        .foregroundColor(.blue)
+                    }
+                    
+                    Divider()
+                    HStack {
+                        Text("Vibrate")
+                        Spacer()
+                        Menu{
+                            Button("Yes", action: {})
+                            Button("No", action: {})
+                            
+                        } label: {
+                            Text("Yes")
+                                .underline()
+                        }
+                        .foregroundColor(.blue)
+                    }
+                }
+                .font(.system(size: 20, weight: .semibold))
+                .padding()
+                
+            }
+            .navigationTitle("Select Time")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar{
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("Save") {
+                        save()
+                        dismiss.wrappedValue.dismiss()
+                    }
+                }
+            }
         }
         .onAppear {
-            // Initialize to the current system time (in a 12-hour cycle).
-            let now = Date()
-            let calendar = Calendar.current
-            let hour = calendar.component(.hour, from: now) % 12
-            let minute = calendar.component(.minute, from: now)
-            totalMinutes = Double(hour * 60 + minute)
+            clockVM.onAppear()
         }
     }
 }
+
+
+#Preview(body: {
+    NavigationView{
+        AlarmClockView() {}
+    }
+})

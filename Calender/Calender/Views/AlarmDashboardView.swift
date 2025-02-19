@@ -15,7 +15,7 @@ struct AlarmDashboardView: View {
         NavigationView {
             ZStack{
                 ScrollView {
-                    LazyVGrid(columns: [GridItem(.flexible(), spacing: 8), GridItem(.flexible(), spacing: 8)]){
+                    LazyVGrid(columns: [GridItem(.flexible(), spacing: 8)/*, GridItem(.flexible(), spacing: 8)*/]){
                         ForEach(0..<alarmVM.count, id: \.self) { index in
                             ZStack {
                                 RoundedRectangle(cornerRadius: 25)
@@ -51,7 +51,9 @@ struct AlarmDashboardView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     NavigationLink {
-                        AlarmClockView()
+                        AlarmClockView(){
+                            alarmVM.count += 1
+                        }
                     } label: {
                         Image(systemName: "plus")
                     }

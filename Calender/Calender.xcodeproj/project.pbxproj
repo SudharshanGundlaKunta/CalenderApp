@@ -16,6 +16,8 @@
 		187388E92D5BA9F100A309D7 /* CalenderDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187388E82D5BA9F100A309D7 /* CalenderDashboard.swift */; };
 		187496962D64EA1900206B81 /* AlarmClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187496952D64EA1900206B81 /* AlarmClockView.swift */; };
 		187496982D64EA5700206B81 /* ArrowHandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187496972D64EA5700206B81 /* ArrowHandView.swift */; };
+		1874969A2D65038900206B81 /* AlarmClockVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187496992D65038900206B81 /* AlarmClockVM.swift */; };
+		18916C492D663994007CC980 /* ClockAlarmDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18916C482D663994007CC980 /* ClockAlarmDataModel.swift */; };
 		18C042A62D634AE900226206 /* AlarmDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C042A52D634AE900226206 /* AlarmDashboardView.swift */; };
 		18C042A82D634BC600226206 /* AlarmDashboardVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C042A72D634BC600226206 /* AlarmDashboardVM.swift */; };
 		18F73EB52D5D1F5F00718E7D /* LocalJsonDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F73EB42D5D1F5F00718E7D /* LocalJsonDataManager.swift */; };
@@ -32,6 +34,8 @@
 		187388E82D5BA9F100A309D7 /* CalenderDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderDashboard.swift; sourceTree = "<group>"; };
 		187496952D64EA1900206B81 /* AlarmClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmClockView.swift; sourceTree = "<group>"; };
 		187496972D64EA5700206B81 /* ArrowHandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowHandView.swift; sourceTree = "<group>"; };
+		187496992D65038900206B81 /* AlarmClockVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmClockVM.swift; sourceTree = "<group>"; };
+		18916C482D663994007CC980 /* ClockAlarmDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockAlarmDataModel.swift; sourceTree = "<group>"; };
 		18C042A52D634AE900226206 /* AlarmDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDashboardView.swift; sourceTree = "<group>"; };
 		18C042A72D634BC600226206 /* AlarmDashboardVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDashboardVM.swift; sourceTree = "<group>"; };
 		18F73EB42D5D1F5F00718E7D /* LocalJsonDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalJsonDataManager.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				187388E62D5B975300A309D7 /* MonthModel.swift */,
+				18916C482D663994007CC980 /* ClockAlarmDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 			children = (
 				18F73EB72D5D20AA00718E7D /* CalenderDashboardVM.swift */,
 				18C042A72D634BC600226206 /* AlarmDashboardVM.swift */,
+				187496992D65038900206B81 /* AlarmClockVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -217,7 +223,9 @@
 				185062A52D5A5D34005D34FD /* calenderJson.json in Sources */,
 				185062952D5A54BE005D34FD /* CalenderApp.swift in Sources */,
 				187496982D64EA5700206B81 /* ArrowHandView.swift in Sources */,
+				1874969A2D65038900206B81 /* AlarmClockVM.swift in Sources */,
 				18F73EB82D5D20AA00718E7D /* CalenderDashboardVM.swift in Sources */,
+				18916C492D663994007CC980 /* ClockAlarmDataModel.swift in Sources */,
 				187388E72D5B975300A309D7 /* MonthModel.swift in Sources */,
 				187388E92D5BA9F100A309D7 /* CalenderDashboard.swift in Sources */,
 				187496962D64EA1900206B81 /* AlarmClockView.swift in Sources */,
