@@ -9,6 +9,11 @@ import SwiftUI
 
 @main
 struct CalenderApp: App {
+    
+    init() {
+        LocalNotificationManager.shared.requestForAuthorisation()
+    }
+    
     var body: some Scene {
         WindowGroup {
             AlarmDashboardView()

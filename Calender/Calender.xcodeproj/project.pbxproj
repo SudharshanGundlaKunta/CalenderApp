@@ -18,6 +18,7 @@
 		187496982D64EA5700206B81 /* ArrowHandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187496972D64EA5700206B81 /* ArrowHandView.swift */; };
 		1874969A2D65038900206B81 /* AlarmClockVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187496992D65038900206B81 /* AlarmClockVM.swift */; };
 		18916C492D663994007CC980 /* ClockAlarmDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18916C482D663994007CC980 /* ClockAlarmDataModel.swift */; };
+		18916C4B2D664A2B007CC980 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18916C4A2D664A2B007CC980 /* LocalNotificationManager.swift */; };
 		18C042A62D634AE900226206 /* AlarmDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C042A52D634AE900226206 /* AlarmDashboardView.swift */; };
 		18C042A82D634BC600226206 /* AlarmDashboardVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C042A72D634BC600226206 /* AlarmDashboardVM.swift */; };
 		18F73EB52D5D1F5F00718E7D /* LocalJsonDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F73EB42D5D1F5F00718E7D /* LocalJsonDataManager.swift */; };
@@ -36,6 +37,8 @@
 		187496972D64EA5700206B81 /* ArrowHandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowHandView.swift; sourceTree = "<group>"; };
 		187496992D65038900206B81 /* AlarmClockVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmClockVM.swift; sourceTree = "<group>"; };
 		18916C482D663994007CC980 /* ClockAlarmDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockAlarmDataModel.swift; sourceTree = "<group>"; };
+		18916C4A2D664A2B007CC980 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
+		18916C4C2D664FEB007CC980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		18C042A52D634AE900226206 /* AlarmDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDashboardView.swift; sourceTree = "<group>"; };
 		18C042A72D634BC600226206 /* AlarmDashboardVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDashboardVM.swift; sourceTree = "<group>"; };
 		18F73EB42D5D1F5F00718E7D /* LocalJsonDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalJsonDataManager.swift; sourceTree = "<group>"; };
@@ -72,10 +75,11 @@
 		185062932D5A54BE005D34FD /* Calender */ = {
 			isa = PBXGroup;
 			children = (
+				18916C4C2D664FEB007CC980 /* Info.plist */,
 				185062942D5A54BE005D34FD /* CalenderApp.swift */,
 				185062982D5A54C1005D34FD /* Assets.xcassets */,
 				18F73EB22D5D1F2700718E7D /* Resources */,
-				18F73EB32D5D1F3500718E7D /* NetworkManagers */,
+				18F73EB32D5D1F3500718E7D /* DateManagers */,
 				18F73EB12D5D1EFB00718E7D /* Models */,
 				185062A22D5A54D4005D34FD /* Views */,
 				18F73EB62D5D207F00718E7D /* ViewModels */,
@@ -128,12 +132,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		18F73EB32D5D1F3500718E7D /* NetworkManagers */ = {
+		18F73EB32D5D1F3500718E7D /* DateManagers */ = {
 			isa = PBXGroup;
 			children = (
 				18F73EB42D5D1F5F00718E7D /* LocalJsonDataManager.swift */,
+				18916C4A2D664A2B007CC980 /* LocalNotificationManager.swift */,
 			);
-			path = NetworkManagers;
+			path = DateManagers;
 			sourceTree = "<group>";
 		};
 		18F73EB62D5D207F00718E7D /* ViewModels */ = {
@@ -229,6 +234,7 @@
 				187388E72D5B975300A309D7 /* MonthModel.swift in Sources */,
 				187388E92D5BA9F100A309D7 /* CalenderDashboard.swift in Sources */,
 				187496962D64EA1900206B81 /* AlarmClockView.swift in Sources */,
+				18916C4B2D664A2B007CC980 /* LocalNotificationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +371,7 @@
 				DEVELOPMENT_TEAM = 3YTW3FAHAB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Calender/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -395,6 +402,7 @@
 				DEVELOPMENT_TEAM = 3YTW3FAHAB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Calender/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

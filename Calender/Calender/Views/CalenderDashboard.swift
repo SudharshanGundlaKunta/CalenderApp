@@ -57,7 +57,7 @@ struct CalenderDashboard: View {
                     VStack(spacing: 8) {
                         ForEach(viewModel.days[rowIndex].indices, id: \.self) { colIndex in
                             if viewModel.days[rowIndex][colIndex] == "" {
-                                let randomNum = Int.random(in: 1...3)
+                                //let randomNum = Int.random(in: 1...3)
                                 Image("")
                                     .resizable()
                                     .frame(width: 50, height: 50)

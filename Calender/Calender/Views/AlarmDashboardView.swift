@@ -41,7 +41,9 @@ struct AlarmDashboardView: View {
                                 }
                                 .padding()
                             }
-                            
+                            .onTapGesture {
+                                LocalNotificationManager.shared.scheduleNotification()
+                            }
                         }
                     }
                     .padding()
