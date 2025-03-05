@@ -15,6 +15,14 @@ class AlarmClockVM: ObservableObject {
     @Published var hourHandOffset: Double? = nil
     @Published var minuteHandOffset: Double? = nil
     
+    @Published var label: String = "Label"
+    @Published var amorpm: String = "AM"
+    @Published var frequency: String = "Daily"
+    @Published var type: String = "Normal"
+    @Published var alarmSound: String = "default"
+    @Published var snoozeAfter: String = "5min"
+    @Published var vibrate: Bool = false
+    
     var minuteArrowAngle: Angle {
         Angle.degrees((totalMinutes.truncatingRemainder(dividingBy: 60)) * 6)
     }
@@ -81,4 +89,31 @@ class AlarmClockVM: ObservableObject {
         let minute = calendar.component(.minute, from: now)
         totalMinutes = Double(hour * 60 + minute)
     }
+    
+    func getCalenderModelData() -> AlarmModel {
+        let calender = Calendar.current
+        let adjustedHour = (amorpm == "AM") ? (hours == 12 ? 0 : hours) : (hours == 12 ? 12 : hours + 12)
+        let components = DateComponents(hour: adjustedHour, minute: minutes)
+        var time = ""
+        if let date = calender.date(from: components){
+            let formatter = DateFormatter()
+            formatter.timeStyle = .short
+            
+            time = formatter.string(from: date)
+        }
+        
+        return AlarmModel(time: time, label: label, amorpm: amorpm, frequency: frequency, type: type, alarmSound: alarmSound, snoozeAfter: snoozeAfter, vibrate: vibrate)
+    }
+}
+
+
+struct AlarmModel {
+    var time: String
+    var label: String
+    var amorpm: String
+    var frequency: String
+    var type: String
+    var alarmSound: String
+    var snoozeAfter: String
+    var vibrate: Bool
 }

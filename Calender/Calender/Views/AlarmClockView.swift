@@ -11,7 +11,7 @@ struct AlarmClockView: View {
     
     @StateObject var clockVM: AlarmClockVM = AlarmClockVM()
     @Environment(\.presentationMode) var dismiss
-    var save: () -> ()
+    var save: (AlarmModel) -> ()
 
     var body: some View {
         VStack {
@@ -88,10 +88,14 @@ struct AlarmClockView: View {
                     }
                 
                 Menu {
-                    Button("AM", action: {})
-                    Button("PM", action: {})
+                    Button("AM", action: {
+                        clockVM.amorpm = "AM"
+                    })
+                    Button("PM", action: {
+                        clockVM.amorpm = "PM"
+                    })
                 } label: {
-                    Text(("AM"))
+                    Text(clockVM.amorpm)
                         .underline()
                 }
                 .font(.system(size: 20, weight: .semibold))
@@ -111,11 +115,15 @@ struct AlarmClockView: View {
                         Text("Label")
                         Spacer()
                         Menu{
-                            Button("Work", action: {})
-                            Button("Personal", action: {})
+                            Button("Work", action: {
+                                clockVM.label = "Work"
+                            })
+                            Button("Personal", action: {
+                                clockVM.label = "Personal"
+                            })
                             
                         } label: {
-                            Text("Label")
+                            Text(clockVM.label)
                                 .underline()
                         }
                         .foregroundColor(.blue)
@@ -126,11 +134,17 @@ struct AlarmClockView: View {
                         Text("Frequency")
                         Spacer()
                         Menu{
-                            Button("Daily", action: {})
-                            Button("Custom", action: {})
-                            Button("Weekdays", action: {})
+                            Button("Daily", action: {
+                                clockVM.frequency = "Daily"
+                            })
+                            Button("Custom", action: {
+                                clockVM.frequency = "Custom"
+                            })
+                            Button("Weekdays", action: {
+                                clockVM.frequency = "Weekdays"
+                            })
                         } label: {
-                            Text("Daily")
+                            Text(clockVM.frequency)
                                 .underline()
                         }
                         .foregroundColor(.blue)
@@ -140,12 +154,18 @@ struct AlarmClockView: View {
                         Text("Type")
                         Spacer()
                         Menu{
-                            Button("Click annd stop", action: {})
-                            Button("Image Recognisation", action: {})
-                            Button("Puzzle Solver", action: {})
+                            Button("Click annd stop", action: {
+                                clockVM.type = "Click annd stop"
+                            })
+                            Button("Image Recognisation", action: {
+                                clockVM.type = "Image Recognisation"
+                            })
+                            Button("Puzzle Solver", action: {
+                                clockVM.type = "Puzzle Solver"
+                            })
                             
                         } label: {
-                            Text("Normal")
+                            Text(clockVM.type)
                                 .underline()
                         }
                         .foregroundColor(.blue)
@@ -156,12 +176,18 @@ struct AlarmClockView: View {
                         Text("Alarm Sound")
                         Spacer()
                         Menu{
-                            Button("Rains", action: {})
-                            Button("Imagine dragons", action: {})
-                            Button("Dont mess", action: {})
+                            Button("Rains", action: {
+                                clockVM.alarmSound = "Rains"
+                            })
+                            Button("Imagine dragons", action: {
+                                clockVM.alarmSound = "Imagine dragons"
+                            })
+                            Button("Dont mess", action: {
+                                clockVM.alarmSound = "Dont mess"
+                            })
                             
                         } label: {
-                            Text("default")
+                            Text(clockVM.alarmSound)
                                 .underline()
                         }
                         .foregroundColor(.blue)
@@ -172,12 +198,18 @@ struct AlarmClockView: View {
                         Text("Snooze")
                         Spacer()
                         Menu{
-                            Button("10 min", action: {})
-                            Button("15 min", action: {})
-                            Button("20 min", action: {})
+                            Button("10 min", action: {
+                                clockVM.snoozeAfter = "10 min"
+                            })
+                            Button("15 min", action: {
+                                clockVM.snoozeAfter = "15 min"
+                            })
+                            Button("20 min", action: {
+                                clockVM.snoozeAfter = "20 min"
+                            })
                             
                         } label: {
-                            Text("5min")
+                            Text(clockVM.snoozeAfter)
                                 .underline()
                         }
                         .foregroundColor(.blue)
@@ -188,11 +220,15 @@ struct AlarmClockView: View {
                         Text("Vibrate")
                         Spacer()
                         Menu{
-                            Button("Yes", action: {})
-                            Button("No", action: {})
+                            Button("Yes", action: {
+                                clockVM.vibrate = true
+                            })
+                            Button("No", action: {
+                                clockVM.vibrate = false
+                            })
                             
                         } label: {
-                            Text("Yes")
+                            Text(clockVM.vibrate ? "Yes" : "No")
                                 .underline()
                         }
                         .foregroundColor(.blue)
@@ -207,7 +243,7 @@ struct AlarmClockView: View {
             .toolbar{
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Save") {
-                        save()
+                        save(clockVM.getCalenderModelData())
                         dismiss.wrappedValue.dismiss()
                     }
                 }
@@ -222,6 +258,6 @@ struct AlarmClockView: View {
 
 #Preview(body: {
     NavigationView{
-        AlarmClockView() {}
+        AlarmClockView() {_ in }
     }
 })

@@ -10,13 +10,14 @@ import SwiftUI
 struct AlarmDashboardView: View {
     
     @StateObject var alarmVM: AlarmDashboardVM = AlarmDashboardVM()
+    @State var times: [AlarmModel] = []
     
     var body: some View {
         NavigationView {
             ZStack{
                 ScrollView {
                     LazyVGrid(columns: [GridItem(.flexible(), spacing: 8)/*, GridItem(.flexible(), spacing: 8)*/]){
-                        ForEach(0..<alarmVM.count, id: \.self) { index in
+                        ForEach(0..<times.count, id: \.self) { index in
                             ZStack {
                                 RoundedRectangle(cornerRadius: 25)
                                     .fill(.white)
@@ -25,14 +26,14 @@ struct AlarmDashboardView: View {
                                     
                                 
                                 VStack(alignment: .leading, spacing: 8) {
-                                    Text("Work")
+                                    Text(times[index].label)
                                         .font(.headline)
                                         .fontWeight(.medium)
                                     
-                                    Text("08:30 AM")
+                                    Text(times[index].time)
                                         .font(.system(size: 30))
                                     
-                                    Text("Everyday")
+                                    Text(times[index].frequency)
                                         .font(.subheadline)
                                         .fontWeight(.medium)
                                     
@@ -53,8 +54,8 @@ struct AlarmDashboardView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     NavigationLink {
-                        AlarmClockView(){
-                            alarmVM.count += 1
+                        AlarmClockView(){ time in
+                            self.times.append(time)
                         }
                     } label: {
                         Image(systemName: "plus")
